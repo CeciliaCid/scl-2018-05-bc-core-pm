@@ -1,21 +1,26 @@
 window.cipher = {
-  encode: () => {
+  encode: (mensajeEnviado, offset) => {
     /* Acá va tu código */
-    let mensajeEnviado = document.getElementById("textoACifrar").value;
-    let offset = document.getElementById("keyOffset").value;
     let mensajeCifrado = "";
     
     for (let i = 0; i < mensajeEnviado.length; i++){
-      const formula = (mensajeEnviado.toUpperCase().charCodeAt(i)-65+offset)%26+65;
+      const formula = (mensajeEnviado.toUpperCase().charCodeAt(i)- 65 + offset)%26 + 65;
       const cifrar = String.fromCharCode(formula);
       mensajeCifrado+=cifrar;
     }
    console.log(mensajeCifrado);
-   const resultado = document.getElementById("textoCifrado").innerHTML = mensajeCifrado;
-
+return mensajeCifrado
   },
-  decode: () => {
+  decode: (mensajeADescifrar, offset) => {
     /* Acá va tu código */
-    let mensajeCifrado
+    let mensajeDescifrado = "";
+
+    for(let i = 0; i< mensajeADescifrar.length; i++){
+      const formula = (mensajeADescifrar.toUpperCase().charCodeAt(i)+ 65 - offset)%26 + 65;
+      const descifrar = String.fromCharCode(formula);
+      mensajeDescifrado+=descifrar;
+    }
+    console.log(mensajeDescifrado);
+return mensajeDescifrado
   }
 }
