@@ -21,10 +21,10 @@
                 <input id="keyOffset" type="number" name="Key" min="0" max="33" step="1" value="0">
             </div>
             <h3>Incresa tu texto aquí para cifrar:</h3>
-            <textarea id ="textoACifrar" name="mensaje"> Tu mensaje aquí </textarea>
+            <textarea id = "textoACifrar" name="mensaje"></textarea>
             <br>
             <br>
-            <button onclick="cipher.encode()" id="cifrarButton">¡CIFRAR!</button>
+            <button onclick="encode()" id="cifrarButton">¡CIFRAR!</button>
             <br>
             <br>
             <h3>Texto cifrado es:</h3>
@@ -33,15 +33,15 @@
         <div class="main3">
             <br>
             <h3>Ingresa tu texto aquí para descifrar:</h3>
-            <textarea name="mensaje">Tu mensaje aquí</textarea>
+            <textarea id="textoADescifrar" name="mensaje"></textarea>
             <br>
             <br>
-            <button onclick="cipher.decode()" id="descifrarButton">¡DESCIFRAR!
+            <button onclick="decode()" id="descifrarButton">¡DESCIFRAR!
             </button>
             <br>
             <br>
             <h3>Tu Texto descifrado es:</h3>
-            <textarea name="mensaje"></textarea>
+            <textarea id="textoDescifrado" name="mensaje"></textarea>
             <br>
             <br>
         </div>
