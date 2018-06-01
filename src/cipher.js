@@ -12,7 +12,6 @@ window.cipher = {
       }else{ //Solo si mi string no esta dentro de mi abc
         mensajeCifrado += String.fromCharCode(mensajeMayus.charCodeAt(i));
       }
-      
     }
    console.log(mensajeCifrado);
 return mensajeCifrado
